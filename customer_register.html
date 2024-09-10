@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("sign.jpg");
+            background-size: 100%;
+        }
+
+        .container {
+            background-color: #ffffff;
+            background-color: #86db89;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px 0;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: crimson;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .captcha {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Registration</h2>
+        <form id="customerRegistrationForm">
+            <input type="text" placeholder="First Name" id="firstName" required>
+            <input type="text" placeholder="Last Name" id="lastName" required>
+            <input type="text" placeholder="Mobile Number" id="mobileNumber" required>
+            <input type="text" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+            <div class="captcha">
+                <img src="captcha_image.jpg" alt="CAPTCHA">
+            </div>
+            <input type="text" placeholder="Enter CAPTCHA" id="captcha" required>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+    <script>
+        const customerRegistrationForm = document.getElementById('customerRegistrationForm');
+        customerRegistrationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Retrieve input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const captcha = document.getElementById('captcha').value;
+
+            // Perform registration logic here
+            alert('Customer registration submitted.\n\n' +
+                'First Name: ' + firstName + '\n' +
+                'Last Name: ' + lastName + '\n' +
+                'Mobile Number: ' + mobileNumber + '\n' +
+                'Email: ' + email + '\n' +
+                'Password: ' + password + '\n' +
+                'Confirm Password: ' + confirmPassword + '\n' +
+                'CAPTCHA: ' + captcha);
+        });
+    </script>
+</body>
+</html>

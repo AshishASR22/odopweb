@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="product1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Products</h1>
+
+    <!-- JavaScript will populate this section -->
+    <div id="product-list"></div>
+</div>
+
+<script src="product1.js"></script>
+<script>
+    // Sample product data (20 products)
+    const products = [
+        {
+            name: "fish grower",
+            price: "Rs 1499",
+            image: "Fish1.jpg",
+        },
+        {
+            name: "Omega 3 - Fish Liver Oil",
+            price: "Rs 120",
+            image: "fish2.jpg",
+        },
+        {
+            name: "lajawab achaar",
+            price: "Rs 799",
+            image: "achaar.jpg",
+        },
+        {
+            name: "sudha paneer",
+            price: "Rs 65",
+            image: "paneer.jpg",
+        },
+        {
+            name: "kadak mirch",
+            price: "Rs 899",
+            image: "lall_mirch.jpg",
+        },
+        {
+            name: "jeewan ghee",
+            price: "Rs 45",
+            image: "ghee.jpg",
+        },
+        {
+            name: "gajab chat masala",
+            price: "Rs 999",
+            image: "chaat_masaala.jpg",
+        },
+        {
+            name: "super walnuts",
+            price: "Rs 89",
+            image: "walnuts.jpg",
+        },
+        {
+            name: "chatak daal",
+            price: "Rs 49",
+            image: "daal.jpg",
+        },
+        {
+            name: "swaadanushar butter",
+            price: "Rs 55",
+            image: "butter.jpg",
+        },
+        {
+            name: "taaze seb",
+            price: "Rs 349",
+            image: "apple.jpg",
+        },
+        {
+            name: "peeli haldii",
+            price: "Rs 12",
+            image: "turmeric-powder.jpg",
+        },
+        {
+            name: "sudha milk",
+            price: "Rs 1099",
+            image: "glass-bowl-flour-marble.jpg",
+        },
+        {
+            name: "honey",
+            price: "Rs 39",
+            image: "jar-with-fresh-honey.jpg",
+        },
+        {
+            name: "walnut shake",
+            price: "Rs 29",
+            image: "frappe-drink-with-caramel-nuts-isolated-white-background-ai-generative.jpg",
+        },
+        {
+            name: "Fish meat",
+            price: "Rs 15",
+            image: "top-view-fresh-raw-fishes-wooden-cutting-board-oil-bottle-fresh-foods-dark-mix-colors-table.jpg",
+        },
+        {
+            name: "sudha curd",
+            price: "Rs 19",
+            image: "1609874_P2PEMZ0.jpg",
+        },
+        {
+            name: "millets",
+            price: "Rs 8",
+            image: "collection-common-food-allergens-people.jpg",
+        },
+        {
+            name: "hariya sweets",
+            price: "Rs 9",
+            image: "eastern-sweets-turkish-delight-lokum-with-nuts.jpg",
+        },
+        {
+            name: "ashish apple juice",
+            price: "Rs 19",
+            image: "4472268_2359167.jpg",
+        }
+    ];
+
+    // Function to create a product element
+    function createProduct(product) {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>Price: ${product.price}</p>
+            <div class="actions">
+                <i class="fas fa-cart-plus"></i>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-exchange-alt compare"></i>
+            </div>
+            <div class="suggestion">Others also liked this</div>
+        `;
+
+        return productDiv;
+    }
+
+    // Function to add products to the product list
+    function addProductsToPage(products) {
+        const productList = document.getElementById("product-list");
+
+        products.forEach((product) => {
+            const productElement = createProduct(product);
+            productList.appendChild(productElement);
+        });
+    }
+
+    // Call the function to add products to the page
+    addProductsToPage(products);
+</script>
+</body>
+</html>

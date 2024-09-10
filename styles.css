@@ -1,0 +1,116 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #ee6d6d;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  .district-wise-products h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    align-items: center;
+    height: 80px;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .intro {
+    background-image: url('background.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .district-wise-products {
+    padding: 20px;
+  }
+
+  .bada-box {
+    border: 0.5px solid gray;
+    height: auto;
+    background-color: cornsilk;
+  }
+
+  .container1 {
+    width: 100%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .product-tile {
+    width: 250px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    text-align: center;
+  }
+  
+  .product-tile h3 {
+    font-size: 25px;
+    border: 1px solid black;
+    background-color:#ee6d6d ;
+  }
+
+  .product-tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    h
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add more specific styles and media queries as needed for responsiveness */
+  

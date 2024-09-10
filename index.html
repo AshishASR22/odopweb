@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About ODOP</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Other Platforms</a>
+      <div class="dropdown-content">
+        <a href="https://www.amazon.com" target="_blank">Amazon</a>
+        <a href="https://www.flipkart.com" target="_blank">Flipkart</a>
+      </div>
+    </li>
+    <li><a href="shoping_kart.html">Products</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="login.html">Sign In</a></li>
+    <li><a href="login.html">My Account</a></li>
+    <li><input type="text" placeholder="Search"></li>
+    <li>
+      <select>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <!-- Add more languages as needed -->
+      </select>
+    </li>
+    <li><a href="cart.html">My Cart</a></li>
+  </ul>
+</nav>
+</div>
+
+<script>
+// JavaScript to toggle visibility of dropdown content
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  dropdown.addEventListener("click", function() {
+    dropdownContent.style.display === "none" || dropdownContent.style.display === "" 
+      ? dropdownContent.style.display = "block"
+      : dropdownContent.style.display = "none";
+  });
+});
+</script>
+
+</body>
+</html>
+
+    
+  </header>
+
+  <section class="intro" style="background:url(./background_image.jpg);">
+    <h1 style="color: white;">Welcome to the Official Website of </h1> <br>
+    <h1 style="color: white;">One District One Product- Jammu & Kashmir</h1>
+    <p style="font-size: 20px; color: white;">The One District One Product (ODOP) initiative in Jammu and Kashmir aims
+      to promote and market the region's
+      diverse products,
+      from traditional handicrafts to agricultural produce. This government-led program seeks to empower local artisans
+      and entrepreneurs,
+      create jobs, and modernize production methods. Challenges remain in reaching wider markets and ensuring fair
+      compensation for local producers.
+      Innovative software-based solutions are needed to address these issues, including traceability through blockchain
+      and direct market linkages.</p>
+  </section>
+
+  <div class="bada-box">
+    <section class="district-wise-products">
+      <h2>District-Wise Selected Products</h2>
+      <!-- Add product tiles for each district -->
+      <div class="container1">
+        <div class="product-tile">
+          <h3>Anantnag</h3>
+          <a href="anantnag.html">
+            <img src="fish.jpg" alt="Product Image">
+          </a>
+          <p>Anantnag, blessed with abundant water resources, specializes in producing a delightful array of fish-based
+            products.
+            From succulent fish fillets to tantalizing smoked fish,the istrict is renowned for its delectable fish
+            pickles.
+            The locals skillfully craft these products, enhancing the region's culinary offerings and providing a taste
+            of
+            the aquatic bounty.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Bandipora</h3>
+          <a href="bandipora.html">
+            <img src="mutton_products.jpg" alt="Product Image">
+          </a>
+          <p>Bandipora, nestled in the picturesque Kashmir Valley, is celebrated for its high-quality poultry and mutton
+            products.
+            The district ensures a ready supply of fresh and succulent meat, meeting the demands of meat enthusiasts.
+            Additionally, Bandipora takes pride in its orchards,
+            producing a variety of apple-based products, including jams, juices, and preserves, showcasing the region's
+            love for this beloved fruit.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Baramulla</h3>
+          <a href="baramulla.html">
+            <img src="apple_based_product.jpg" alt="Product Image">
+          </a>
+          <p>Baramulla is a dairy hub, offering a wide range of milk-based products.
+            The district's dairy industry yields an array of dairy delights, from creamy cheese to wholesome yogurt and
+            rich butter.
+            The quality and freshness of these milk-based offerings have made Baramulla a favored destination for dairy
+            aficionados.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Budgam</h3>
+          <a href="budgam.html">
+            <img src="milk_based_product.jpg" alt="Product Image">
+          </a>
+          <p>Budgam, nestled in the heart of Kashmir, is renowned for its dairy production. The district excels in
+            crafting an assortment of milk-based products that cater to various tastes and preferences.
+            The locally sourced milk forms the basis for a variety of offerings, ensuring a steady supply of dairy
+            goodness to the community.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Doda</h3>
+          <a href="doda.html">
+            <img src="olive_based_product.jpg" alt="Product Image">
+          </a>
+          <p>Doda, blessed with an ideal climate for olives, specializes in producing premium olive products. The
+            district
+            is known for its cold-pressed olive oil, pickled olives, and a range of olive-based condiments.
+            These products not only add flavor to local cuisine but also contribute to the region's culinary heritage.
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="product-tile">
+          <h3>Ganderbal</h3>
+          <a href="ganderbal.html">
+            <img src="fish_based_product.jpg" alt="Product Image">
+          </a>
+          <p>Ganderbal, surrounded by serene lakes and rivers, boasts a thriving fish-based product industry.
+            The district offers a diverse range of fish-related delicacies, ranging from fresh fillets to delightful
+            fish
+            pickles.
+            Ganderbal's fish products showcase the richness of its aquatic resources and add a distinctive flavor to the
+            local gastronomy.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Jammu</h3>
+          <a href="jammu.html">
+            <img src="milk_based_product.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Jammu, known for its pastoral landscapes, is a hub for milk-based products. The district's dairy industry
+            thrives, providing an extensive range of dairy delights.
+            From the traditional favorites like paneer to the richness of ghee, Jammu's milk-based offerings are
+            cherished
+            by locals and visitors alike.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Kathua</h3>
+          <a href="kathua.html">
+            <img src="spices_based_product.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Kathua is synonymous with aromatic spices that grace the region's culinary delights. The district is
+            celebrated for its bountiful spice production, ranging from vibrant red chilies to aromatic cardamom.
+            These spices not only enhance the taste of local dishes but also contribute to the distinct flavors of
+            Kashmiri cuisine.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Kishtwar</h3>
+          <a href="kishtwar.html">
+            <img src="walnut_products.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Kishtwar, blessed with abundant walnut orchards, is renowned for its superior-quality walnut products. The
+            district's skilled artisans produce premium walnut kernels, walnut oil, and an assortment of walnut-based
+            sweets and desserts.
+            These products embody the region's love for walnuts and their versatile use in traditional recipes.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Kupwara</h3>
+          <a href="kupwara.html">
+            <img src="walnut_based.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Kupwara, a region blessed with fertile lands, is a hub for high-quality walnut products. The district's
+            expertise lies in processing walnut kernels, walnut oil, and an array of walnut-based delicacies.
+            Kupwara's walnut offerings are a testament to the region's culinary heritage and appreciation for this
+            nutritious nut.</p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="product-tile">
+          <h3>Kulgam</h3>
+          <a href="kulgam.html">
+            <img src="spices_pickles.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Kulgam is a spice and pickle haven, offering an aromatic array of spices and flavorful pickles. The
+            district's diverse spice production, including a blend of pungent and aromatic spices, elevates the taste of
+            local dishes.
+            Additionally, the carefully crafted pickles add a tangy zest to the culinary delights of the region.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Poonch</h3>
+          <a href="poonch.html">
+            <img src="millet_based_product.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Poonch prides itself on its millet-based products, showcasing the rich agricultural heritage of the region.
+            The district produces a variety of millet-based products, including millet flour and an assortment of
+            traditional dishes.
+            Poonch's millet offerings not only contribute to a healthy diet but also preserve the culinary traditions of
+            the area.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Pulwama</h3>
+          <a href="pulwama.html">
+            <img src="milk_product.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Pulwama, known for its fertile lands and picturesque vistas, is a significant contributor to the dairy
+            industry. The district specializes in an array of milk-based products, ensuring a steady supply of fresh
+            dairy
+            essentials to meet local demands.
+            From creamy desserts to wholesome dairy treats, Pulwama caters to the dairy preferences of its residents.
+          </p>
+        </div>
+        <div class="product-tile">
+          <h3>Rajouri</h3>
+          <a href="rajouri.html">
+            <img src="milk_cream.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Rajouri, nestled amidst the majestic mountains, prides itself on its dairy offerings. The district is a hub
+            for milk-based products, delivering a range of creamy delights to the local community.
+            The quality and richness of Rajouri's dairy products have earned them a cherished place in the hearts and
+            palates of the residents.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Ramban</h3>
+          <a href="ramban.html">
+            <img src="honey_product.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Ramban is renowned for its pure and natural honey, harvested from the diverse flora of the region. The
+            district's honey is known for its exquisite taste, representing the distinct flavors of the local flora.
+            Ramban's honey is not only a culinary delight but also a source of health benefits, enjoyed by both locals
+            and
+            visitors.</p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="product-tile">
+          <h3>Reasi</h3>
+          <a href="reasi.html">
+            <img src="spices_products.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Reasi is a spice paradise, renowned for its aromatic and flavorful spices. The district's spice production
+            includes an array of spices that lend a distinctive taste and aroma to Kashmiri cuisine.
+            These spices are an essential part of local cooking, infusing every dish with a burst of flavors.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Samba</h3>
+          <a href="samba.html">
+            <img src="mushroom_products.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Samba, with its favorable climate and soil conditions, excels in mushroom cultivation. The district
+            specializes in mushroom products, offering a variety of mushroom-based dishes, preserves, and sauces.
+            Samba's mushroom products cater to both the local market and beyond, showcasing the versatility and culinary
+            potential of mushrooms.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Shopian</h3>
+          <a href="shopian.html">
+            <img src="apple.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Shopian, known as the 'Appple Bowl of India', is a haven for apple-based products. The district produces a
+            wide range of apple delights, including apple pies, refreshing cider, and an assortment of apple-based
+            sweets.
+            Shopian's apple products embody the region's love for this luscious fruit and are a true delight for apple
+            enthusiasts.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Srinagar</h3>
+          <a href="srinagar.html">
+            <img src="bakery_products.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Srinagar, the summer capital of Jammu and Kashmir, is a hub for delectable bakery products. The district
+            offers an array of freshly baked goods, from soft bread to mouth-watering pastries and traditional Kashmiri
+            bakery items.
+            Srinagar's bakeries infuse a blend of local flavors and international techniques, creating a delightful
+            culinary experience.</p>
+        </div>
+        <div class="product-tile">
+          <h3>Udhampur</h3>
+          <a href="udhampur.html">
+            <img src="pickels_products.jpg" alt="Product Image" width="100%">
+          </a>
+          <p>Udhampur, although specific products were not provided, likely boasts a range of local specialties. The
+            district's unique offerings could include diverse agricultural products, handicrafts,
+            or other regional delights that reflect the cultural richness and traditions of the area. Further
+            exploration
+            would reveal the distinctiveness of Udhampur's local products.</p>
+        </div>
+      </div>
+      <!-- Repeat the product tiles for other districts -->
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>JK mart the freind of ODOP and its missions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Go to top of the page and fill a form.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p>Instagram</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

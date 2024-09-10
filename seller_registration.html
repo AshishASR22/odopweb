@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("sign.jpg");
+            background-size: 100%;
+        }
+
+        .container {
+            background-color: #ffffff;
+            background-color: #86db89;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 10px 0;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: crimson;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .captcha {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Seller Registration</h2>
+        <form id="sellerRegistrationForm">
+            <input type="text" placeholder="First Name" id="firstName" required>
+            <input type="text" placeholder="Last Name" id="lastName" required>
+            <input type="text" placeholder="Business Name" id="businessName" required>
+            <input type="text" placeholder="Mobile Number" id="mobileNumber" required>
+            <input type="text" placeholder="Email Id" id="emailid" required>
+            <select id="productCategory" required>
+                <option value="" disabled selected>Select Product Category</option>
+                <option value="Fish-based products">Fish-based Products</option>
+                <option value="Poultry/Mutton products">Poultry/Mutton Products</option>
+                <option value="Apple-based products">Apple-based Products</option>
+                <option value="Milk-based products">Milk-based Products</option>
+                <option value="Olive products">Olive Products</option>
+                <option value="Spices">Spices</option>
+                <option value="Walnut products">Walnut Products</option>
+                <option value="Spices and Pickle">Spices and Pickle</option>
+                <option value="Millet-based products">Millet-based Products</option>
+                <option value="Honey">Honey</option>
+                <option value="Mushroom products">Mushroom Products</option>
+                <option value="Bakery products">Bakery Products</option>
+            </select>
+            <select id="district" required>
+                <option value="" disabled selected>Select District</option>
+            
+                <option value="Srinagar">Srinagar</option>
+                <option value="Udhampur">Udhampur</option>
+                <option value="Anantnag">Anantnag</option>
+                <option value="Bandipora">Bandipora</option>
+                <option value="Baramulla">Baramulla</option>
+                <option value="Budgam">Budgam</option>
+                <option value="Doda">Doda</option>
+                <option value="Ganderbal">Ganderbal</option>
+                <option value="Jammu">Jammu</option>
+                <option value="Kathua">Kathua</option>
+                <option value="Kishtwar">Kishtwar</option>
+                <option value="Kupwara">Kupwara</option>
+                <option value="Kulgam">Kulgam</option>
+                <option value="Poonch">Poonch</option>
+                <option value="Pulwama">Pulwama</option>
+                <option value="Rajouri">Rajouri</option>
+                <option value="Ramban">Ramban</option>
+                <option value="Reasi">Reasi</option>
+                <option value="Samba">Samba</option>
+                <option value="Shopian">Shopian</option>
+                <!-- Add more districts as needed -->
+            </select>
+            <textarea placeholder="Address with Pincode" id="address" rows="4" required></textarea>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+            <div class="captcha">
+                <img src="captcha_image.jpg" alt="CAPTCHA">
+            </div>
+            <input type="text" placeholder="Enter CAPTCHA" id="captcha" required>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+    <script>
+        const sellerRegistrationForm = document.getElementById('sellerRegistrationForm');
+        sellerRegistrationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Retrieve input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const businessName = document.getElementById('businessName').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const emailid = document.getElementById('emailid').value;
+            const productCategory = document.getElementById('productCategory').value;
+            const district = document.getElementById('district').value;
+            const address = document.getElementById('address').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const captcha = document.getElementById('captcha').value;
+
+            // Perform seller registration logic here
+            alert('Seller registration submitted.\n\n' +
+                'First Name: ' + firstName + '\n' +
+                'Last Name: ' + lastName + '\n' +
+                'Business Name: ' + businessName + '\n' +
+                'Mobile Number: ' + mobileNumber + '\n' +
+                'Product Category: ' + productCategory + '\n' +
+                'District: ' + district + '\n' +
+                'Address: ' + address + '\n' +
+                'Password: ' + password + '\n' +
+                'Confirm Password: ' + confirmPassword + '\n' +
+                'CAPTCHA: ' + captcha);
+
+            // Clear form fields after submission
+            sellerRegistrationForm.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("sign.jpg");
+            background-size: 100%;
+            
+        }
+
+        .container {
+            background-color: #ffffff;
+            background-color: #86db89;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        h2 {
+            color: #010101;
+        }
+
+        input[type="text"], input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px 0;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        img.captcha {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: crimson;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <input type="text" placeholder="Email" id="email" required>
+            <span id="emailError" class="error"></span>
+            <input type="password" placeholder="Password" id="password" required>
+            <span id="passwordError" class="error"></span>
+            <img src="captcha_image.jpg" alt="CAPTCHA" class="captcha">
+            <input type="text" placeholder="Enter CAPTCHA" id="captcha" required>
+            <span id="captchaError" class="error"></span>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('signInForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const captchaInput = document.getElementById('captcha');
+        const captchaError = document.getElementById('captchaError');
+
+        form.addEventListener('submit', function(event) {
+            // Email validation (simple check for demonstration)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.textContent = 'Invalid email address';
+                event.preventDefault();
+            } else {
+                emailError.textContent = '';
+            }
+
+            // Password validation (simple check for demonstration)
+            if (passwordInput.value.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters';
+                event.preventDefault();
+            } else {
+                passwordError.textContent = '';
+            }
+
+            // CAPTCHA validation (for demonstration purposes)
+            if (captchaInput.value !== '1234') {
+                captchaError.textContent = 'CAPTCHA is incorrect. Please try again.';
+                event.preventDefault();
+            } else {
+                captchaError.textContent = '';
+            }
+        });
+    </script>
+    
+      
+</body>
+</html>
